@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 当屏幕宽度大于1200px时，四个div块并列显示，宽度相同 */
+        @media screen  and (min-width:1200px){
+            .box{
+                display: flex;
+                flex-direction: row;
+                height: 60px;
+                justify-content: center;
+            }
+            .box>div:nth-child(1){
+                background: hotpink;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 300px;
+            }
+            .box>div:nth-child(2){
+                background: palegoldenrod;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 300px;
+            }
+            .box>div:nth-child(3){
+                background: blueviolet;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 300px;
+            }
+            .box>div:nth-child(4){
+                background: powderblue;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 300px;
+            }
+        }
+        /* 当屏幕宽度大于992px小于1200px时，第一个div独占一行，剩余三个div并列显示，并且宽度相同 */
+        @media screen and (max-width:1200px) and (min-width:992px){
+            .box>div:nth-child(1){
+                height: 60px;
+                background: hotpink;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 900px;
+            }
+            .box>div:nth-child(2){
+                height: 60px;
+                background:palegoldenrod;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 300px;
+            }
+            .box>div:nth-child(3){
+                height: 60px;
+                background: blueviolet;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 300px;
+            }
+            .box>div:nth-child(4){
+                height: 60px;
+                background: powderblue;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 300px;
+            }
+            .two{
+                float: left;
+            }
+        }
+        /* 当屏幕宽度大于768px小于992px时，两个div并列显示 */
+        @media screen and (max-width:992px) and (min-width:768px){
+            .box>div:nth-child(1){
+                height: 60px;
+                background: hotpink;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 350px;
+            }
+            .box>div:nth-child(2){
+                height: 60px;
+                background:palegoldenrod;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 350px;
+            }
+            .box>div:nth-child(3){
+                height: 60px;
+                background: blueviolet;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 350px;
+            }
+            .box>div:nth-child(4){
+                height: 60px;
+                background: powderblue;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 350px;
+            }
+            .third1{
+                float: left;
+            }
+            .third2{
+                float: left;
+            }
+        }
+        /* 当屏幕宽度小于768px时，每个div均独占一行 */
+        @media screen and (max-width:768px){
+            /* .box{
+                display: flex;
+                flex-direction: column;
+            } */
+            .box>div:nth-child(1){
+                background: hotpink;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 600px;
+            }
+            .box>div:nth-child(2){
+                background: palegoldenrod;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 600px;
+            }
+            .box>div:nth-child(3){
+                background: blueviolet;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 600px;
+            }
+            .box>div:nth-child(4){
+                background: powderblue;
+                color: whitesmoke;
+                text-align: center;
+                line-height: 60px;
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="third1">1</div>
+        <div class="two third1">2</div>
+        <div class="two third2">3</div>
+        <div class="two third2">4</div>
+    </div>
+</body>
+</html>
